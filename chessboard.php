@@ -1,20 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <body>
-    <?php
-    echo "Chessboard";
-    echo "<br>";
-    $value = 8;
-    for ($i = 0; $i < $value; $i++) {
-        for ($j = 0; $j < $value; $j++) {
-            if (($i + $j) % 2 == 0) {
-                echo "<div style='width: 50px; height: 50px; background-color: black; display: inline-block;'></div>";
-            } else {
-                echo "<div style='width: 50px; height: 50px; background-color: white; display: inline-block;'></div>";
-            }
-        }
-        echo "<br>";
-    }
+	<table width="400px" border="1px" cellspacing="0px">
+		<?php
+		echo "Chess by GeeksforGeeks";
+		$value = 0;
+		$col = 0;
+
+		do {
+			$row = 0;
+			echo "<tr>";
+			$value = $col;
+
+			do {
+				if($value%2 == 0) {
+					echo
+"<td height=40px width=20px bgcolor=black></td>";
+					$value++;
+				}
+				else {
+					echo
+"<td height=40px width=20px bgcolor=white></td>";
+					$value++;
+				}
+				$row++;
+			}while($row < 8);
+			echo "</tr>";
+			$col++;
+		}while($col < 8);
+		?>
+	</table>
 </body>
+
 </html>
