@@ -2,19 +2,8 @@
 <html>
 <head>
     <title>Chessboard</title>
-    <style>
-        table {
-            border-collapse: collapse;
-        }
-        td {
-            width: 50px;
-            height: 50px;
-        }
-        .black {
-            background-color: black;
-        }
-    </style>
-
+    <link rel="stylesheet" href="chessboard.css">
+</head>
 <body>
 	<table width="400px" border="1px" cellspacing="0px">
 		<?php
